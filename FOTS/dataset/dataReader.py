@@ -48,7 +48,7 @@ tf.app.flags.DEFINE_string('geometry', 'RBOX',
 
 FLAGS = tf.app.flags.FLAGS
 # avoid a blank as key
-CLASSES = [i.strip('\n').strip('\r').decode("utf-8") for i in open(FLAGS.vocb_path).readlines() if len(i.replace(' ').strip('\n').strip('\r')) > 0]
+CLASSES = [i.strip('\n').strip('\r').decode("utf-8") for i in open(FLAGS.vocb_path).readlines() if len(i.replace(' ', '').strip('\n').strip('\r')) > 0]
 encode_maps={}
 decode_maps={}
 for i, char in enumerate(CLASSES):
