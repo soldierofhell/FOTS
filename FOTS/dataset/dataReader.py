@@ -94,7 +94,7 @@ def load_annoataion(p):
     with open(p, 'r') as f:
         reader = csv.reader(f)
         for line in reader:
-            label = line[-1].replace(' ')
+            label = line[-1].replace(' ', '')
             line = [i.strip('\ufeff').strip('\xef\xbb\xbf') for i in line]
 
             x1, y1, x2, y2, x3, y3, x4, y4 = list(map(float, line[:8]))
