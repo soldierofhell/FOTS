@@ -24,7 +24,7 @@ tf.app.flags.DEFINE_string('vocb_path', '/content/icdar2015/vocb_3.txt', 'vocb f
 tf.app.flags.DEFINE_bool('avoid_vertText', True, 'avoid_vertText')
 tf.app.flags.DEFINE_bool('allow_unknown_char', True, 'allow unknown char')
 
-tf.app.flags.DEFINE_string('ext', 'icdar', '')
+tf.app.flags.DEFINE_string('ext', 'txt', '')
 
 tf.app.flags.DEFINE_integer('LABEL_LEN_UPPER', 16, '')
 tf.app.flags.DEFINE_integer('max_image_large_side', 1280,
@@ -812,7 +812,7 @@ def generator(input_size=224, batch_size=32,random_scale=np.array([0.5, 3.0]),vi
     anno_path = FLAGS.training_anno_path
     print('anno path {}'.format(anno_path))
     image_list = np.array([im_fn for im_fn in image_list if os.path.exists(os.path.join(
-        anno_path, '%s.%s' % (os.path.basename(im_fn).rpartition('.')[0], FLAGS.ext)))])
+        anno_path, '%s.%s' % ('gt_' + os.path.basename(im_fn).rpartition('.')[0], FLAGS.ext)))])
 
     print('{} training images in {}'.format(
         image_list.shape[0], FLAGS.training_data_path))
