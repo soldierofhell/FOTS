@@ -36,7 +36,7 @@ tf.app.flags.DEFINE_integer('max_text_size', 800,
 tf.app.flags.DEFINE_integer('min_text_size', 6,
                             'if the text size is smaller than this, we ignore it during training')
 
-tf.app.flags.DEFINE_integer('crop_aspect_ratio', 0.2,
+tf.app.flags.DEFINE_float('crop_aspect_ratio', 0.2,
                             'if the text size is smaller than this, we ignore it during training')
 tf.app.flags.DEFINE_float('min_crop_side_ratio', 0.3,
                           'when doing random crop from input image, the'
