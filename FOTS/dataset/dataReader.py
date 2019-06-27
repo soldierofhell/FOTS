@@ -834,7 +834,7 @@ def generator(input_size=224, batch_size=32,random_scale=np.array([0.5, 3.0]),vi
 
                 # print im_fn
                 h, w, _ = im.shape
-                txt_fn = os.path.join(anno_path, '%s.%s' % (os.path.basename(im_fn).rpartition('.')[0], FLAGS.ext))
+                txt_fn = os.path.join(anno_path, '%s.%s' % ('gt_' + os.path.basename(im_fn).rpartition('.')[0], FLAGS.ext))
                 if not os.path.exists(txt_fn):
                     print('text file {} does not exists'.format(txt_fn))
                     continue
