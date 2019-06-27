@@ -6,7 +6,7 @@ import detector
 import recognizer
 import RoiRotate
 import sharedConv
-from icdar import NUM_CLASSES, restore_roiRotatePara, restore_rectangle, decode_maps
+from dataset.dataReader import NUM_CLASSES, restore_roiRotatePara, restore_rectangle, decode_maps
 import locality_aware_nms as nms_locality
 
 tf.app.flags.DEFINE_integer('test_input_size', 224, '')
