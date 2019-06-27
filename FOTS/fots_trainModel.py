@@ -5,7 +5,7 @@ import detector
 import recognizer
 import RoiRotate
 import sharedConv
-from FOTS.dataset.dataReader import NUM_CLASSES
+from dataset.dataReader import NUM_CLASSES
 
 tf.app.flags.DEFINE_float('keepProb', 0.8, '')
 tf.app.flags.DEFINE_float('alpha', 1., '')
