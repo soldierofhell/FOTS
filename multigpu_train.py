@@ -4,8 +4,8 @@ import tensorflow as tf
 from tensorflow.contrib import slim
 
 tf.app.flags.DEFINE_integer('input_size', 224, '')
-tf.app.flags.DEFINE_integer('batch_size_per_gpu', 16, '')
-tf.app.flags.DEFINE_integer('num_readers', 4, '')
+tf.app.flags.DEFINE_integer('batch_size_per_gpu', 4, '')
+tf.app.flags.DEFINE_integer('num_readers', 2, '')
 tf.app.flags.DEFINE_float('learning_rate', 0.001, '')
 tf.app.flags.DEFINE_integer('max_steps', 100000, '')
 tf.app.flags.DEFINE_float('moving_average_decay', 0.997, '')
